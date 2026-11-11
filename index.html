@@ -48,3 +48,4 @@ document.addEventListener('click',e=>{const t=e.target.closest('[data-type]');if
 $('search').addEventListener('input',render);$('side').addEventListener('change',e=>{side=e.target.value;render()});$('close').onclick=()=>$('modal').classList.remove('open');$('modal').onclick=e=>{if(e.target===$('modal'))$('modal').classList.remove('open')};document.addEventListener('keydown',e=>{if(e.key==='Escape')$('modal').classList.remove('open')});render();
 if('serviceWorker' in navigator && location.protocol.startsWith('http'))navigator.serviceWorker.register('./sw.js').catch(()=>{});
 </script></body></html>
+<!-- обновление публикации -->
