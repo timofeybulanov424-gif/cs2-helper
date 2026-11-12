@@ -1,4 +1,4 @@
-const CACHE='cs2-helper-v5';
+const CACHE='cs2-helper-v6';
 const ASSETS=['./','./index.html','./manifest.json'];
 const IMAGES=["https://assets.csnades.gg/nades/mirage-molotov-10RFP68gSt/thumbnail.webp", "https://assets.csnades.gg/nades/mirage-smoke-EcLXg7YIUo/thumbnail.webp", "https://d1ntlvfrxziqo6.cloudfront.net/3599b41d-0d27-40fc-b4e6-2eaa923294eb.jpg", "https://d1ntlvfrxziqo6.cloudfront.net/c90213c5-a65c-4194-b937-c756bd6e5931.jpg", "https://media.cs2nades.net/uploads/2beef848-a908-4a92-84fe-bdc5acdb63a9_CT%20from%20A%20Ramp%203.jpg", "https://raskidki-granat-cs2.ru/storage/2025/07/mirage-smoke.png"];
 self.addEventListener('install',e=>e.waitUntil((async()=>{const c=await caches.open(CACHE);await c.addAll(ASSETS);for(const u of IMAGES){try{const r=await fetch(u,{mode:'no-cors'});await c.put(u,r)}catch(_){}}self.skipWaiting()})()));
